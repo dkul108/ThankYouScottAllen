@@ -1,0 +1,8 @@
+﻿@model RecipeSite.Models.RecipeReview
+<div>
+    <h4>@Model.Name</h4>
+    <p>@Model.Description</p>
+    <span>@Model.Rating</span>
+
+    <span>@Html.ActionLink("Edit", "Edit", new { id = Model.Id })</span>
+</div>

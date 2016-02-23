@@ -80,3 +80,11 @@ C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETReci
 C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.csprojResolveAssemblyReference.cache
 C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.dll
 C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.pdb
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.Migrations.InitialCreate.resources
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.csproj.GenerateResource.Cache
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\bin\System.Net.Http.Formatting.dll
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\bin\System.Web.Http.dll
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\bin\System.Web.Http.WebHost.dll
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\bin\System.Net.Http.Formatting.xml
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\bin\System.Web.Http.xml
+C:\Users\Home\Google Drive-enielsen0001\Personal Projects\RecipeSite\ASP.NETRecipeSite\RecipeSite\RecipeSite\bin\System.Web.Http.WebHost.xml
