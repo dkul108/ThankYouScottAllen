@@ -1,5 +1,6 @@
 ﻿using RecipeSite.Models;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -11,26 +12,22 @@ namespace RecipeSite.Controllers
 
         public ActionResult Index(string searchTerm = null )
         {
-            //var model =
-            //_db.Recipes.Select(r => new 
-            //{
-            //    Id = r.Id,
-            //    Name = r.Name,
-            //    Description = r.Description
-            //}).ToList();
-            var model = _db.Recipes.ToList();
+            var model = (from r in _db.Recipes
+                        where r.Name.StartsWith(searchTerm)
+                        select new {
+                            Id = r.Id,
+                            Name = r.Name,
+                            Description = r.Description,
+                            CountOfReviews = r.Reviews.Count()
+                        }).AsEnumerable().Select(x => new RecipeListViewModel {
+                            Id = x.Id,
+                            Name = x.Name,
+                            Description = x.Description,
+                            CountOfReviews = x.CountOfReviews
 
-            //var model =
-            //    (from r in _db.Recipes
-            //        //.OrderByDescending(r => r.Reviews.Average(review => review.Rating))
-            //        //.Where(r => searchTerm == null || r.Name.StartsWith(searchTerm))
-            //    select new Recipe
-            //    {
-            //        Id = r.Id,
-            //        Name = r.Name,
-            //        Description = r.Description,
-            //        //CountOfReviews = r.Reviews.Count()
-            //    }).AsEnumerable().ToList();
+                        }).ToList();
+                        
+
             return View(model);
         }
 
