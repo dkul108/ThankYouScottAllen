@@ -27,7 +27,11 @@ namespace RecipeSite.Controllers
                              Description = x.Description,
                              CountOfReviews = x.CountOfReviews
 
-                         }).ToList();
+                         }).Take(10).ToList();
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_Recipes", model);
+            }
 
             return View(model);
         }

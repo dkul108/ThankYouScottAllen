@@ -54,10 +54,11 @@ namespace OdeToFood.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(RecipeReview review)
+        public ActionResult Edit([Bind(Exclude = "ReviewerName")]RecipeReview review)
         {
             if (ModelState.IsValid)
             {
+                // the Entry APi says here is a review that i want you to start tracking for changes. but dont add it, just Update
                 _db.Entry(review).State = EntityState.Modified;
                 _db.SaveChanges();
                 return RedirectToAction("Index", new
