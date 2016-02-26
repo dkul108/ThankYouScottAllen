@@ -29,5 +29,15 @@ namespace RecipeSite.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<RecipeSite.Models.Recipe> Recipes
+        {
+            get; set;
+        }
+
+        public System.Data.Entity.DbSet<RecipeSite.Models.RecipeReview> RecipeReviews
+        {
+            get; set;
+        }
     }
 }

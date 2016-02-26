@@ -1,127 +1,77 @@
-﻿//using RecipeSite.Models;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.Web.Mvc;
+﻿
+using RecipeSite.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
-//namespace RecipeSite.Controllers
-//{
-//    public class ReviewsController : Controller
-//    {
-//        // GET: Reviews
-//        public ActionResult Index()
-//        {
-//            var model =
-//                from r in _reviews
-//                orderby r.Name
-//                select r;
+namespace OdeToFood.Controllers
+{
+    public class ReviewsController : Controller
+    {
 
-//            return View(model);
-//        }
+        RecipeSiteDb _db = new RecipeSiteDb();
 
-//        // GET: Reviews/Details/5
-//        public ActionResult Details(int id)
-//        {
-//            return View();
-//        }
+        public ActionResult Index([Bind(Prefix = "id")] int recipeId)
+        {
+            var recipe = _db.Recipe.Find(recipeId);
+            if (recipe != null)
+            {
+                return View(recipe);
+            }
+            return HttpNotFound();
+        }
 
-//        // GET: Reviews/Create
-//        public ActionResult Create()
-//        {
-//            return View();
-//        }
+        [HttpGet]
+        public ActionResult Create(int recipeId)
+        {
+            return View();
+        }
 
-//        // POST: Reviews/Create
-//        [HttpPost]
-//        public ActionResult Create(FormCollection collection)
-//        {
-//            try
-//            {
-//                // TODO: Add insert logic here
+        [HttpPost]
+        public ActionResult Create(RecipeReview review)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Reviews.Add(review);
+                _db.SaveChanges();
+                return RedirectToAction("Index", new
+                {
+                    id = review.RecipeId
+                });
+            }
+            return View(review);
+        }
 
-//                return RedirectToAction("Index");
-//            }
-//            catch
-//            {
-//                return View();
-//            }
-//        }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var model = _db.Reviews.Find(id);
+            return View(model);
+        }
 
-//        // GET: Reviews/Edit/5
-//        public ActionResult Edit(int id)
-//        {
-//            var review = _reviews.Single( r => r.Id == id);
-//            return View(review);
-//        }
+        [HttpPost]
+        public ActionResult Edit(RecipeReview review)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Entry(review).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index", new
+                {
+                    id = review.RecipeId
+                });
+            }
+            return View(review);
+        }
 
-//        // POST: Reviews/Edit/5
-//        [HttpPost]
-//        public ActionResult Edit(int id, FormCollection collection)
-//        {
-//            var review = _reviews.Single(r => r.Id == id);
-//            if (TryUpdateModel(review))
-//            {
-//                //..
-//                return RedirectToAction("Index");
-//            }
-//            return View(review);
-//            //try
-//            //{
-//            //    // TODO: Add update logic here
-
-//            //    return RedirectToAction("Index");
-//            //}
-//            //catch
-//            //{
-//            //    return View();
-//            //}
-//        }
-
-//        // GET: Reviews/Delete/5
-//        public ActionResult Delete(int id)
-//        {
-//            return View();
-//        }
-
-//        // POST: Reviews/Delete/5
-//        [HttpPost]
-//        public ActionResult Delete(int id, FormCollection collection)
-//        {
-//            try
-//            {
-//                // TODO: Add delete logic here
-
-//                return RedirectToAction("Index");
-//            }
-//            catch
-//            {
-//                return View();
-//            }
-//        }
-
-//        static List<RecipeReview> _reviews = new List<RecipeReview>
-//        {
-//            new RecipeReview{
-//                        Id=1,
-//                        Name="one",
-//                        Description="words",
-//                        Rating=4
-//                    },
-//            new RecipeReview{
-//                        Id=2,
-//                        Name="two",
-//                        Description="more words",
-//                        Rating=3
-//                    },
-//            new RecipeReview{
-//                        Id=3,
-//                        Name="three",
-//                        Description="even more words",
-//                        Rating=4
-//                    }
-//        };
-        
-
-//    }
-//}
+        protected override void Dispose(bool disposing)
+        {
+            _db.Dispose();
+            base.Dispose(disposing);
+        }
+    }
+}

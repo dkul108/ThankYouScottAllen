@@ -9,7 +9,14 @@ namespace RecipeSite.Models
     {
         public int Id { get; set; }
         public int Rating { get; set; }
-        public string ReviewBody { get; set; }
-        public int RecipeId { get; set; }
+        public string Body { get; set; }
+        public string ReviewerName
+        {
+            get; set;
+        }
+        public int RecipeId
+        {
+            get; set;
+        }
     }
 }

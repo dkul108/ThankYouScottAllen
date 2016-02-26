@@ -13,6 +13,7 @@ namespace RecipeSite
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
             //cuisene route
             routes.MapRoute(
                 "Cuisene", //friendly name,

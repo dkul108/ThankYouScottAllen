@@ -13,7 +13,7 @@ namespace RecipeSite.Controllers
         public ActionResult Search(string name = "all")
         {
             var message = Server.HtmlEncode(name);
-            return Content(name);
+            return Content(message);
         }
 
         

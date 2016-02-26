@@ -8,25 +8,26 @@ namespace RecipeSite.Controllers
 {
     public class HomeController : Controller
     {
-        private RecipeSiteContext _db = new RecipeSiteContext();
+        private RecipeSiteDb _db = new RecipeSiteDb();
 
         public ActionResult Index(string searchTerm = null )
         {
-            var model = (from r in _db.Recipes
-                        where r.Name.StartsWith(searchTerm)
-                        select new {
-                            Id = r.Id,
-                            Name = r.Name,
-                            Description = r.Description,
-                            CountOfReviews = r.Reviews.Count()
-                        }).AsEnumerable().Select(x => new RecipeListViewModel {
-                            Id = x.Id,
-                            Name = x.Name,
-                            Description = x.Description,
-                            CountOfReviews = x.CountOfReviews
+            var model = (from r in _db.Recipe
+                         where r.Name.StartsWith(searchTerm)
+                         select new
+                         {
+                             Id = r.Id,
+                             Name = r.Name,
+                             Description = r.Description,
+                             CountOfReviews = r.Reviews.Count()
+                         }).AsEnumerable().Select(x => new RecipeListViewModel
+                         {
+                             Id = x.Id,
+                             Name = x.Name,
+                             Description = x.Description,
+                             CountOfReviews = x.CountOfReviews
 
-                        }).ToList();
-                        
+                         }).ToList();
 
             return View(model);
         }

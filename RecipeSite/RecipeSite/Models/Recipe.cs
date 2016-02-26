@@ -10,6 +10,6 @@ namespace RecipeSite.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public ICollection<RecipeReview> Reviews { get; set; }
+        public virtual ICollection<RecipeReview> Reviews { get; set; }
     }
 }
