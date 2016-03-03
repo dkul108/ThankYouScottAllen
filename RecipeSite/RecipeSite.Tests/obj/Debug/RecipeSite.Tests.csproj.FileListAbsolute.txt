@@ -118,3 +118,7 @@ C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\R
 C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite.Tests\obj\Debug\RecipeSite.Tests.csprojResolveAssemblyReference.cache
 C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite.Tests\obj\Debug\RecipeSite.Tests.dll
 C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite.Tests\obj\Debug\RecipeSite.Tests.pdb
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite.Tests\bin\Debug\PagedList.dll
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite.Tests\bin\Debug\PagedList.Mvc.dll
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite.Tests\bin\Debug\PagedList.xml
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite.Tests\bin\Debug\PagedList.Mvc.xml

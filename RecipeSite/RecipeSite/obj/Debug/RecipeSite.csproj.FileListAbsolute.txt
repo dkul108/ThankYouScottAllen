@@ -178,3 +178,7 @@ C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\R
 C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.csproj.GenerateResource.Cache
 C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.dll
 C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite\obj\Debug\RecipeSite.pdb
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite\bin\PagedList.dll
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite\bin\PagedList.Mvc.dll
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite\bin\PagedList.xml
+C:\Users\erika.nielsen\Documents\My Web Sites\RecipeSite\RecipeSite\RecipeSite\RecipeSite\bin\PagedList.Mvc.xml
